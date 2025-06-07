@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+:root {
+    --color : #f33849;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.parent > div:first-child {
+    height: 60%;
+    width: 80%;
+    border: 10px solid rgba(242, 86, 86, 0.708);
+    justify-self: center;
+}
+
+.parent > div:first-child img {
+    width: 90%;
+    position: relative;
+    top: 50%;
+    left: -10%;
+    border-radius: 10px;
+    transform: translate(0 , -50%);
+    -webkit-transform: translate(0 , -50%);
+    -moz-transform: translate(0 , -50%);
+    -ms-transform: translate(0 , -50%);
+    -o-transform: translate(0 , -50%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.parent > div:last-child {
+    height: 75vh;
+    width: 50%;
+}
+
+.parent > div:last-child h1{
+    min-width: 410px;
+    color: rgb(23, 23, 23);
+    margin: 25px 0;
+}
+
+.parent > div:last-child .us {
+    margin-bottom: 40px;
+    padding: 0 0 0 65px;
+    position: relative;
+    text-transform: lowercase;
+    color: var(--color);
+    font-weight: bold;
+}
+
+.us::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 2px solid var(--color);
+    top: 3px;
+    left: 0;
+}
+
+.us::after {
+    content: '';
+    width: 10%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--color);
+    top: 8px;
+    left: 6px;
+}
+
+.par {
+    min-width: 500px;
+    color: #636363;
+    font-size: small;
+    line-height: 1.7;
+    margin: 10px 0 20px;
+}
+
+.pic {
+    margin: 30px 40px 0 0;
+    display: flex;
+    min-width: 550px;
+    justify-content: space-between;
+    text-align: center;
+    font-size: small;
+}
+
+.pic .style {
+    border: 2px solid #DDD;
+    padding: 35px;
+    position: relative;
+    counter-increment: count;
+}
+
+.pic .pic2 {
+    padding: 40px;
+}
+
+.pic .pic3 {
+    padding: 40px;
+}
+
+.pic img {
+    width: 70px;
+}
+
+.style::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: var(--color);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    clip-path: polygon(0 0 ,100% 0 ,100% 100%);
+}
+
+.style::before {
+    content: counter(count);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+    font-size: 100px;
+    right: 0px;
+}
+/* .parent > div:last-child {
+    width: 80%;
+    justify-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.style {
+    border: 2px solid #ddd;
+    width: calc(80% /3);
+    font-size: small;
+    margin: 10px;
+    height: 110px;
+    text-align: center;
+}
+
+.parent>div:last-child * {
+   
+} */

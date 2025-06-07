@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+body {
+    background-image: url("../imgs/kseniia-rastvorova-U2AwijfUNS4-unsplash.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: brightness(0.5);
+}
+
+.container {
+    width: 85vw;
+    height: 85vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 5px 1px #656565;;
+    transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.container > div:first-child {
+    border-right: solid 2px #ddd;
+}
+
+.container > div:first-child > div:first-child img {
+    width: 75px;
+    padding-left: 10px;
+}
+
+.container > div:first-child > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+[type="search"] {
+    all: unset;
+    background-color: #ececec;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.container > div:first-child div:not(:first-child) {
+    width: 80%;
+    padding: 15px;
+    margin: 10px 10px 10px 10%;
+    border-top: solid 1px #ddd;
+    font-size: small;
+    padding-left: 25%;
+    position: relative;
+}
+
+.container>div:first-child div:not(:first-child) > p {
+    padding: 5px 0 0 0;
+    color: #9c9c9c;
+}
+
+.container > div:first-child div:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    left: 8%;
+    top: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-position: center;
+}
+
+.container>div:first-child div:nth-child(2)::before {
+    background-image: url(../imgs/premium_photo-1664203068007-52240d0ca48f.avif);
+}
+
+.container>div:first-child div:not(:nth-child(1),:nth-child(3),:nth-child(7))::after {
+    content: '2:09 PM';
+    color: #9c9c9c;
+    position: absolute;
+    font-size: small;
+    width: 100px;
+    height: 50px;
+    right: -18%;
+    top: 17px;
+}
+
+.container>div:first-child div:nth-child(3)::before {
+    background-image: url(../imgs/premium_photo-1663054688278-ebf09d654d33.avif);
+}
+
+.container>div:first-child div:nth-child(3)::after {
+    content: '1:44 PM';
+    color: #9c9c9c;
+    position: absolute;
+    font-size: small;
+    width: 100px;
+    height: 50px;
+    right: -18%;
+    top: 15px;
+}
+
+.container>div:first-child div:nth-child(6)::before {
+    background-image: url(../imgs/photo-1580489944761-15a19d654956.avif);
+}
+
+.container>div:first-child div:nth-child(5)::before {
+    background-image: url(../imgs/photo-1531746020798-e6953c6e8e04.avif);
+}
+
+.container>div:first-child div:nth-child(4)::before {
+    background-image: url(../imgs/photo-1528892952291-009c663ce843.avif);
+}
+
+.container>div:first-child div:nth-child(7)::before {
+    background-image: url(../imgs/istockphoto-2157576136-612x612.webp);
+    left: 16%;
+}
+
+.container>div:first-child div:nth-child(7) {
+    background-color: #00b0ff;
+    color: white;
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    padding-left: 35%;
+}
+
+.container>div:first-child div:nth-child(7)::after {
+    content: '2:14 AM';
+    color: white;
+    position: absolute;
+    font-size: small;
+    width: 100px;
+    height: 50px;
+    right: -4%;
+    top: 20px;
+}
+
+.selected {
+    color: white !important;
+}
+
+.container > div:last-child > :first-child {
+    width: 100%;
+    padding: 23px;
+    background-color: #ececec;
+    font-weight: bold;
+    position: relative;
+    border-bottom: #ddd 1px solid;
+}
+
+.container > div:last-child > :first-child::before {
+    content: 'To: ';
+    color: #b6b6b6;
+    font-weight: 100;
+}
+
+.container>div:last-child {
+    height: 100%;
+    position: relative;
+}
+
+.container>div:last-child> :last-child {
+    width: 85%;
+    height: 395px;
+    margin: 20% 7.5% 0;
+    border-top: solid 2px #ddd;
+    padding: 20px 0 0;
+    position: relative;
+}
+
+.container>div:last-child> :last-child::after {
+    content:'Monday,1:27 PM';
+    position: absolute;
+    background-color: white;
+    color: #b6b6b6;
+    top: -20px;
+    padding: 10px 30px;
+    left: 50%;
+    font-size: small;
+    transform: translate(-50%);
+}
+
+.me,
+.my-contact {
+    width: fit-content;
+    padding: 13px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.me {
+    background-color: #00b0ff;
+    color: white;
+}
+
+.my-contact {
+    background-color: #ececec;
+    justify-self: flex-end;
+}
+
+.me::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    background-color: #00b0ff;
+    clip-path: polygon(0 50% ,100% 0 ,100% 100%);
+    left: -10px;
+    top: 50%;
+    transform: translate(0 ,-50%);
+    -webkit-transform: translate(0 ,-50%);
+    -moz-transform: translate(0 ,-50%);
+    -ms-transform: translate(0 ,-50%);
+    -o-transform: translate(0 ,-50%);
+}
+
+.my-contact::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    background-color: #ececec;
+    clip-path: polygon(0 0, 0 100% ,100% 50%);
+    right: -12px;
+    top: 50%;
+    transform: translate(0 ,-50%);
+    -webkit-transform: translate(0 ,-50%);
+    -moz-transform: translate(0 ,-50%);
+    -ms-transform: translate(0 ,-50%);
+    -o-transform: translate(0 ,-50%);
+}
+
+.container>div:last-child> :last-child > div {
+    background-color: #ececec;
+    width: 100%;
+    height: 50px;
+    border: solid 2px #ddd;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.container>div:last-child> :last-child> div img {
+    width: 25px;
+    padding: 3px;
+}

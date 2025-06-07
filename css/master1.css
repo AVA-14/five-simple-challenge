@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    line-height: 1.7;
+}
+
+.parent {
+    background-color: #51509b;
+    height: 100vh;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px 10%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parent :first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.parent :first-child h1 {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.parent :first-child h1::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-image: url(../imgs/icons8-metal-music-64.png);
+    position: absolute;
+    top: 0;
+    right: -55px;
+}
+
+.parent :first-child p {
+    font-size: 1vw;
+    width: 100%;
+    display: flex;
+    align-self: flex-start;
+}
+
+button {
+    all: unset;
+    width: 65px;
+    height: fit-content;
+    background-color: #e5af40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.price {
+    font-size: 40px;
+    color: #4c576a;
+    font-weight: bold;
+}
+
+sub {
+    font-size: xx-small;
+    position: relative;
+    top: 10px;
+}
+
+sup {
+    font-size: small;
+    position: relative;
+    bottom: 10px;
+}
+
+.parent .big,
+.parent .small {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 50px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.parent .big {
+    width: 55%;
+    height: 70%;
+    z-index: 2;
+    font-size: small;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big p:not(.price),
+span {
+    width: 100%;
+    font-size: x-small;
+    padding: 10px 0 0;
+}
+
+.big p:not(.price) {
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.big span {
+    padding: 20px 0 0;
+}
+
+.big .buy {
+    display: grid;
+    grid-template-areas: "price but";
+    margin: 20px 0 0;
+}
+
+.big .buy p {
+    grid-area: price;
+}
+
+.big .buy button {
+    grid-area: but;
+    position: absolute;
+    right: 15%;
+    bottom: 23%;
+}
+
+.parent .small {
+    width: 45%;
+    height: 45%;
+    position: relative;
+    top: 50%;
+    left: -10px;
+    transform: translate(0, -80%);
+    -webkit-transform: translate(0, -80%);
+    -moz-transform: translate(0, -80%);
+    -ms-transform: translate(0, -80%);
+    -o-transform: translate(0, -80%);
+    box-shadow: 10px 0 15px 0px rgb(196, 196, 196) inset;
+}
+
+.parent .small {
+    font-size: small;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small p:not(.price) {
+    width: 100%;
+    font-size: x-small;
+    padding: 10px 0 0;
+    border-bottom: solid 1px #e4e4e4;
+    padding: 10px 0;
+}
+
+.small .buy {
+    display: grid;
+    grid-template-areas: "price but";
+    margin: 20px 0 0;
+}
+
+.small .buy p {
+    grid-area: price;
+}
+
+.small .buy button {
+    grid-area: but;
+    position: absolute;
+    right: 15%;
+    bottom: 10%;
+}
+
+.big h2,
+.small h2 {
+    padding: 0 0 10px 40px;
+    position: relative;
+}
+
+.big h2::after,
+.small h2::after {
+    content: '';
+    width: 81%;
+    height: 4px;
+    background-color: #fae0a9;
+    position: absolute;
+    bottom: 40%;
+    z-index: -1;
+}
+
+.big h2::before {
+    content: '';
+    background-color: #e5af40;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 10px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.small h2::before {
+    content: '';
+    background-color: #e5af40;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 18px;
+    left: 10px;
+    clip-path: polygon(0 66%, 34% 100%, 100% 44%, 90% 32%, 34% 81%, 13% 58%);
+}

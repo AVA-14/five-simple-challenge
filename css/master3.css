@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+:root {
+    --main-purple-color: #5c48f1;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #e0e0e1;
+}
+
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: "head head head head" "binary scheme drawing web" "bug cloud coding puzzle";
+}
+
+.parent h2 {
+    grid-area: head;
+    background-color: var(--elements-background-color);
+    color: var(--main-purple-color);
+    padding: 30px;
+    margin: 10px 10px 20px;
+    text-align: center;
+}
+
+.parent .binary {
+    grid-area: binary;
+}
+
+.parent .binary::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-binary-100.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .scheme {
+    grid-area: scheme;
+}
+
+.parent .scheme::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-scheme-98.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .drawing {
+    grid-area: drawing;
+}
+
+.parent .drawing::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-art-therapist-96.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .web {
+    grid-area: web;
+}
+
+.parent .web::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-web-100.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .bug {
+    grid-area: bug;
+}
+
+.parent .bug::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-bug-90.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .cloud {
+    grid-area: cloud;
+}
+
+.parent .cloud::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-clouds-100.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .coding {
+    grid-area: coding;
+}
+
+.parent .coding::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-coding-64.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent .puzzle {
+    grid-area: puzzle;
+}
+
+.parent .puzzle::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../imgs/icons8-puzzle-96.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.interest {
+    border: 4px solid var(--element-border-color);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+
+.interest h4 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    -webkit-transform: translate(-50%, -75%);
+    -moz-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    -o-transform: translate(-50%, -75%);
+}
+
+[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #b5b5b5;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: relative;
+}
+
+[type="checkbox"]:checked {
+    border: solid 2px var(--main-purple-color);
+    position: relative;
+}
+
+[type="checkbox"]:hover {
+    border: solid 2px var(--main-purple-color);
+}
+
+[type="checkbox"]:checked::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-purple-color);
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.interest:has(input:checked){
+    border: 4px solid var(--main-purple-color);
+    background-color: var(--elements-background-color);
+}
+
+[type="checkbox"]:hover::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: var(--main-purple-color);
+    position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 0.5;
+}
